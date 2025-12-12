@@ -20,6 +20,10 @@ args = parser.parse_args()
 def get_file_list(path, recursive=False):
     files = []
 
+    if not os.path.exists(path):
+        files.append(path)
+        return files
+
     if os.path.isfile(path):
         files.append(path)
     elif os.path.isdir(path):
@@ -76,8 +80,7 @@ def single_file(filepath):
                 else:
                     print(lines_counter)
         else:
-            print(filepath)
-                        
+            print(filepath)                
     except FileNotFoundError:
         sys.stderr.write(f"Файл {filepath} не найден\n")
 
