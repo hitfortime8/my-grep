@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description='Утилита для поиска
 parser.add_argument('-i', action='store_true', help='Поиск без учета регистра')
 parser.add_argument('-n', action='store_true', help='Отображение номера строки, в которой найдено слово')
 parser.add_argument('-v', action='store_true', help='Инвертированный поиск')
-parser.add_argument('-c', action='store_true', help='Показывает количество совпадений')
+parser.add_argument('-c', action='store_true', help='Подсчитывает количество строк, в которых найдено совпадение')
 parser.add_argument('-r', action='store_true', help='Поиск рекурсивно в директории')
 parser.add_argument('-l', action='store_true', help='Вывести только имена файлов, в которых есть совпадение')
 parser.add_argument('word', help='Слово, принимаемое для поиска')
